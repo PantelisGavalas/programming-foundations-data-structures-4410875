@@ -8,7 +8,15 @@ user_preferences = {
 
 
 def update_preferences(user_pref):
-    return {}
+    '''
+    new_dict = {}
+    for key, value in user_pref.items():
+        if value:
+            new_dict[key] = value
+
+    return new_dict
+    '''
+    return {key: value for key, value in user_pref.items() if value}
 
 
 print(update_preferences(user_preferences))
